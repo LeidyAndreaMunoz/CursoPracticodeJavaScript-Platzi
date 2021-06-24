@@ -12,13 +12,16 @@ function areaCuadrado(lado){
 
 
 //Medidas Triángulo
-
-const lado1 = Inputlado1triangulo
-const lado2 = Inputlado1triangulo
-const base = Inputbasetriangulo
-
-function perimetroTriangulo(lado1, lado2, base) {
-    return lado1 + lado2 + base
+function perimetroTriangulo() {
+    const lado1 = document.getElementById("Inputlado1triangulo").value
+    const lado2 = document.getElementById("Inputlado2triangulo").value
+    const base = document.getElementById("Inputbasetriangulo").value
+    if (lado1 === lado2) {
+        alert(parseInt(lado1) + parseInt(lado2) + parseInt(base) ) 
+    } else {
+        alert("No es un triangulo isoceles")
+    }
+    
 }
 
 
@@ -62,4 +65,19 @@ function calcularAreaCuadrado() {
 function  calcularPerimetroTriangulo() {
     const perimetro = perimetroTriangulo
     alert(perimetro)
+}
+
+function alturaTriangulo() {
+    var l1 = parseInt(document.getElementById("Inputlado1triangulo").value)
+    var l2 = parseInt(document.getElementById("Inputlado2triangulo").value)
+    var base = parseInt(document.getElementById("Inputbasetriangulo").value)  
+    
+    if(l1 === l2) {
+        var altura = Math.pow(l1,2) - Math.pow((base/2), 2);
+        alert("La alutura es: " + Math.sqrt(altura))
+    } else {
+        alert("No es un triangulo isoceles")
+    }
+   
+
 }
